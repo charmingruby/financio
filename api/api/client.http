@@ -1,0 +1,7 @@
+@baseUrl = http://localhost:3000
+
+# @name register
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+###
