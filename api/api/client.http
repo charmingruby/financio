@@ -4,4 +4,9 @@
 POST {{baseUrl}}/users
 Content-Type: application/json
 
+{
+    "name": "Gustavo Dias",
+    "email": "gustavodiasa2121@gmail.com",
+    "password": "password123"
+}
 ###
