@@ -6,3 +6,6 @@ dist
 
 # environment variables
 .env
+
+# docker
+.docker

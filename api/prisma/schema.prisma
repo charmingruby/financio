@@ -16,7 +16,7 @@ model User {
 
   bankAccounts          BankAccount[]
   transactionCategories TransactionCategory[]
-  Transaction           Transaction[]
+  transaction           Transaction[]
 
   @@map("users")
 }
@@ -46,7 +46,7 @@ model BankAccount {
 
 enum TransactionType {
   INCOME
-  OUTCOME
+  EXPENSE
 
   @@map("transaction_type")
 }
