@@ -8,8 +8,8 @@ import { compare, hash } from 'bcryptjs'
 
 import { UsersRepository } from '@/shared/database/repositories/users.repositories'
 
-import { AuthenticateDto } from './dto/authenticate.dto'
-import { RegisterDto } from './dto/register'
+import { SigninDto } from './dto/signin.dto'
+import { SignupDto } from './dto/signup.dto'
 
 @Injectable()
 export class AuthService {
@@ -18,7 +18,7 @@ export class AuthService {
     private readonly usersRepo: UsersRepository,
   ) {}
 
-  async authenticate(dto: AuthenticateDto) {
+  async signin(dto: SigninDto) {
     const { email, password } = dto
 
     const user = await this.usersRepo.findUnique({
@@ -39,7 +39,7 @@ export class AuthService {
     return { accessToken }
   }
 
-  async create(dto: RegisterDto) {
+  async signup(dto: SignupDto) {
     const { email, password } = dto
 
     const emailTaken = await this.usersRepo.findUnique({
