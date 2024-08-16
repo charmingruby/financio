@@ -9,4 +9,15 @@ Content-Type: application/json
     "email": "gustavodiasa2121@gmail.com",
     "password": "password123"
 }
+
+###
+
+# @name signin
+POST {{baseUrl}}/auth/signin
+Content-Type: application/json
+
+{
+    "email": "gustavodiasa2121@gmail.com",
+    "password": "password123"
+}
 ###
