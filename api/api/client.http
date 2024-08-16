@@ -1,7 +1,7 @@
 @baseUrl = http://localhost:3000
 
 # @name register
-POST {{baseUrl}}/users
+POST {{baseUrl}}/auth/signup
 Content-Type: application/json
 
 {
