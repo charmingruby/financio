@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:3000
+@accessToken = {{signin.response.body.accessToken}}
 
 # @name register
 POST {{baseUrl}}/auth/signup
@@ -21,3 +22,8 @@ Content-Type: application/json
     "password": "password123"
 }
 ###
+
+# @name me
+GET {{baseUrl}}/users/me
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
