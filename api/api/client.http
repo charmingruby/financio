@@ -27,3 +27,10 @@ Content-Type: application/json
 GET {{baseUrl}}/users/me
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
+
+###
+
+# @name list_categories
+GET {{baseUrl}}/transaction-categories
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
