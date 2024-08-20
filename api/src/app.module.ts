@@ -5,7 +5,8 @@ import { AuthModule } from './modules/auth/auth.module'
 import { AuthGuard } from './modules/auth/guards/auth.guard'
 import { TransactionCategoriesModule } from './modules/transaction-categories/transaction-categories.module'
 import { UsersModule } from './modules/users/users.module'
-import { DatabaseModule } from './shared/database/repositories/database.module'
+import { DatabaseModule } from './shared/database/database.module'
+import { BankAccountsModule } from './modules/bank-accounts/bank-accounts.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { DatabaseModule } from './shared/database/repositories/database.module'
     AuthModule,
     UsersModule,
     TransactionCategoriesModule,
+    BankAccountsModule,
   ],
   controllers: [],
   providers: [

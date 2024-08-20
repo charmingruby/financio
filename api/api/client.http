@@ -1,5 +1,6 @@
 @baseUrl = http://localhost:3000
 @accessToken = {{signin.response.body.accessToken}}
+@bankAccountId = {{{list_bank_accounts.response.body.id}}}
 
 # @name register
 POST {{baseUrl}}/auth/signup
@@ -32,5 +33,47 @@ Content-Type: application/json
 
 # @name list_categories
 GET {{baseUrl}}/transaction-categories
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+###
+
+# @name create_bank_account
+POST {{baseUrl}}/bank-accounts
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+    "name": "Nubank",
+    "initialBalance": 1500,
+    "color": "#7950F2",
+    "type": "CHECKING"
+}
+
+###
+
+# @name list_bank_accounts
+GET {{baseUrl}}/bank-accounts
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+###
+
+# @name update_bank_account
+PUT {{baseUrl}}/bank-accounts/deeb2419-fec4-41cd-836c-41bcb4124852
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{
+    "name": "Nubank",
+    "initialBalance": 2500,
+    "color": "#7950F2",
+    "type": "CHECKING"
+}
+
+###
+
+# @name delete_bank_account
+DELETE {{baseUrl}}/bank-accounts/231a4150-194d-40d5-a843-03114eef7053
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
