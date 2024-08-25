@@ -77,3 +77,37 @@ Content-Type: application/json
 DELETE {{baseUrl}}/bank-accounts/231a4150-194d-40d5-a843-03114eef7053
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
+
+###
+
+# @name list_transactions
+GET {{baseUrl}}/transactions
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+###
+
+# @name create_transaction
+POST {{baseUrl}}/transactions
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{}
+
+###
+
+# @name update_transactions
+PUT {{baseUrl}}/transactions/KKK
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{}
+
+###
+
+# @name delete_transactions
+DELETE {{baseUrl}}/transactions/KKK
+Authorization: Bearer {{accessToken}}
+Content-Type: application/json
+
+{}
