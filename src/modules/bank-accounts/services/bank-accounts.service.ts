@@ -4,13 +4,13 @@ import { BankAccountsRepository } from '@/shared/database/repositories/bank-acco
 
 import { CreateBankAccountDto } from '../dto/create-bank-account.dto'
 import { UpdateBankAccountDto } from '../dto/update-bank-account.dto'
-import { ValidateBankAccountsOwnershipService } from './validate-bank-account-ownership.service'
+import { ValidateBankAccountOwnershipService } from './validate-bank-account-ownership.service'
 
 @Injectable()
 export class BankAccountsService {
   constructor(
     private readonly bankAccountsRepo: BankAccountsRepository,
-    private readonly validateBankAccountOwnershipService: ValidateBankAccountsOwnershipService,
+    private readonly validateBankAccountOwnershipService: ValidateBankAccountOwnershipService,
   ) {}
 
   create(userId: string, dto: CreateBankAccountDto) {
