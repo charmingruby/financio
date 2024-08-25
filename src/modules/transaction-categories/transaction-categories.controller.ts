@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common'
 
 import { ActiverUserId } from '@/shared/decorators/activer-user-id'
 
-import { TransactionCategoriesService } from './transaction-categories.service'
+import { TransactionCategoriesService } from './services/transaction-categories.service'
 
 @Controller('transaction-categories')
 export class TransactionCategoriesController {
