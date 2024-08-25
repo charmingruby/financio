@@ -120,8 +120,6 @@ Content-Type: application/json
 ###
 
 # @name delete_transactions
-DELETE {{baseUrl}}/transactions/KKK
+DELETE {{baseUrl}}/transactions/feed0c7e-0304-470e-8949-c079195fc804
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
-
-{}
