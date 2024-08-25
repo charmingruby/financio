@@ -93,7 +93,7 @@ Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
-  "bankAccountId": "740ff864-0f01-483b-8ba2-2230c5eeddd7",
+  "bankAccountId": "6ca2c2b9-353c-4b9e-9dd0-72eeb08bd308",
   "categoryId": "184c4d11-3e82-4bde-b822-eb26c9b011eb",
   "name": "Aug Salary",
   "value": 6000,
@@ -104,11 +104,18 @@ Content-Type: application/json
 ###
 
 # @name update_transactions
-PUT {{baseUrl}}/transactions/KKK
+PUT {{baseUrl}}/transactions/366aa918-5b64-4d3d-97c7-0a3b08d5d8c4
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
-{}
+{
+  "name": "Aug Salary",
+  "value": 7500,
+  "date": "2024-08-25T12:04:22.845Z",
+  "type": "INCOME",
+  "bankAccountId": "6ca2c2b9-353c-4b9e-9dd0-72eeb08bd308",
+  "categoryId": "184c4d11-3e82-4bde-b822-eb26c9b011eb"
+}
 
 ###
 
