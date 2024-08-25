@@ -1,6 +1,6 @@
 @baseUrl = http://localhost:3000
 @accessToken = {{signin.response.body.accessToken}}
-@bankAccountId = {{{list_bank_accounts.response.body.id}}}
+@bankAccountId = {{{create_bank_account.response.body.id}}}
 
 # @name register
 POST {{baseUrl}}/auth/signup
@@ -92,7 +92,14 @@ POST {{baseUrl}}/transactions
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
-{}
+{
+  "bankAccountId": "740ff864-0f01-483b-8ba2-2230c5eeddd7",
+  "categoryId": "184c4d11-3e82-4bde-b822-eb26c9b011eb",
+  "name": "Aug Salary",
+  "value": 6000,
+  "date": "2024-08-25T12:04:22.845Z",
+  "type": "INCOME"
+}
 
 ###
 

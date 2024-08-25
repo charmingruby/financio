@@ -11,8 +11,8 @@ export class TransactionsController {
   constructor(private readonly transactionsService: TransactionsService) {}
 
   @Post()
-  create(@Body() dto: CreateTransactionDto) {
-    return this.transactionsService.create(dto)
+  create(@ActiverUserId() userId: string, @Body() dto: CreateTransactionDto) {
+    return this.transactionsService.create(userId, dto)
   }
 
   @Get()
