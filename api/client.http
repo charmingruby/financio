@@ -81,7 +81,7 @@ Content-Type: application/json
 ###
 
 # @name list_transactions
-GET {{baseUrl}}/transactions
+GET {{baseUrl}}/transactions?month=7&year=2024&bankAccountId=5e6cf8c3-e23c-4cb5-b326-27d5b477a4df&type=EXPENSE
 Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
@@ -93,12 +93,12 @@ Authorization: Bearer {{accessToken}}
 Content-Type: application/json
 
 {
-  "bankAccountId": "6ca2c2b9-353c-4b9e-9dd0-72eeb08bd308",
+  "bankAccountId": "5e6cf8c3-e23c-4cb5-b326-27d5b477a4df",
   "categoryId": "184c4d11-3e82-4bde-b822-eb26c9b011eb",
   "name": "Aug Salary",
   "value": 6000,
   "date": "2024-08-25T12:04:22.845Z",
-  "type": "INCOME"
+  "type": "EXPENSE"
 }
 
 ###
