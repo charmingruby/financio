@@ -19,9 +19,31 @@ export class BankAccountsService {
     })
   }
 
-  findAllByUserId(userId: string) {
-    return this.bankAccountsRepo.findMany({
+  async findAllByUserId(userId: string) {
+    const bankAccounts = await this.bankAccountsRepo.findMany({
       where: { userId },
+      include: {
+        transactions: {
+          select: {
+            type: true,
+            value: true,
+          },
+        },
+      },
+    })
+
+    return bankAccounts.map(({ transactions, ...bankAccount }) => {
+      const totalTransactions = transactions.reduce(
+        (acc, t) => acc + (t.type === 'EXPENSE' ? -t.value : t.value),
+        0,
+      )
+
+      const currentBalance = bankAccount.initialBalance + totalTransactions
+
+      return {
+        ...bankAccount,
+        currentBalance,
+      }
     })
   }
 
@@ -55,7 +77,6 @@ export class BankAccountsService {
       userId,
       bankAccountId,
     )
-
     await this.bankAccountsRepo.delete({
       where: {
         id: bankAccountId,
